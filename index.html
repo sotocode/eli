@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>elian.sms homepage</title>
+
+       <link type="text/css" rel="stylesheet" href="style.css">
+
+            <!-- This code below is my Favicon -->
+      <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+      <link rel="shortcut icon" href="assets/favicon.ico" />
+
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+      <link rel="manifest" href="assets/site.webmanifest" />
+   </head>
+
+<body>
+    <div class="container">
+        <div class="left">
+          
+         <!-- This code below is TOP UI -->
+            <a href="index.html">
+                <button type="button" class="uih">
+                    <img src="assets/UI/home-selected.png" alt="home">
+                </button>
+            </a>
+            <a href="about-me.html">
+                <button type="button" class="uia">
+                    <img src="assets/UI/about-blank.png" alt="about-me">
+                </button>
+            </a>
+            <a href="my-art-a.html">
+                <button type="button" class="uib">
+                    <img src="assets/UI/art-blank.png" alt="my-art">
+                </button>
+            </a>
+            <a href="contact-me.html">
+                <button type="button" class="uic">
+                    <img src="assets/UI/contact-blank.png" alt="contact-me">
+                </button>
+            </a>
+
+         <!-- This code below is BUTTONS -->
+
+                        <a href="about-me.html">
+                <button type="button" class="about-me">
+                    <img src="assets/about-button.png" alt="about-me" class="about-me">
+                </button>
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="my-art-a.html" class="art-link">
+                <button type="button" class="my-art">
+                    <img src="assets/art-button.png" alt="my-art" class="my-art">
+                </button>
+            </a>
+            <a href="contact-me.html" class="contact-link">
+                <button type="button" class="contact-me">
+                    <img src="assets/contact-button.png" alt="contact-me" class="contact-me">
+                </button>
+            </a>
+        </div>
+    </div>
+
+    
+
+<div class="moving">
+    <a href="about-me.html">
+        <button type="button">Next</button>
+    </a>
+</div>
+
+<audio id="click-sound" src="assets/transitionsound.mp3" preload="auto"></audio>
+<script>
+document.addEventListener("click", function(event) {
+
+    const link = event.target.closest("a");
+    const button = event.target.closest("button");
+
+    // Ignore clicks that aren't on links or buttons
+    if (!link && !button) return;
+
+    const sound = document.getElementById("click-sound");
+
+    // Restart the sound
+    sound.currentTime = 0;
+
+    // If it's a link, wait for the sound before navigating
+    if (link) {
+        event.preventDefault();
+
+        const destination = link.href;
+
+        sound.onended = function() {
+            window.location.href = destination;
+        };
+
+        sound.play().catch(function() {
+            window.location.href = destination;
+        });
+
+    } else {
+        // Regular buttons just play the sound
+        sound.play();
+    }
+
+});
+</script>
+
+<p class="copyright1">
+    This work is of the sole ownership of Elian.SMS
+    and may not be put through any form of
+    generative AI.
+</p>
+
+</body>
+</html>

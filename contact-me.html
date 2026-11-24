@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>elian.sms contact me</title>
+
+       <link type="text/css" rel="stylesheet" href="style.css">
+
+            <!-- This code below is my Favicon -->
+      <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+      <link rel="shortcut icon" href="assets/favicon.ico" />
+
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+      <link rel="manifest" href="assets/site.webmanifest" />
+
+      <!--this is my paragraph font-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
+   </head>
+
+<body>
+    <div class="container-cm">
+        <div class="left-cm">
+          
+         <!-- This code below is TOP UI -->
+            <a href="index.html">
+                <button type="button" class="uih-cm">
+                    <img src="assets/UI/home-blank.png" alt="home">
+                </button>
+            </a>
+            <a href="about-me.html">
+                <button type="button" class="uia-cm">
+                    <img src="assets/UI/about-blank.png" alt="about-me">
+                </button>
+            </a>
+            <a href="my-art-a.html">
+                <button type="button" class="uib-cm">
+                    <img src="assets/UI/art-blank.png" alt="my-art">
+                </button>
+            </a>
+            <a href="contact-me.html">
+                <button type="button" class="uic-cm">
+                    <img src="assets/UI/contact-selected.png" alt="contact-me">
+                </button>
+            </a>
+
+
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="c2ad2005-2011-4e0a-9031-cddc71bb0bab">
+                <label for="name">your name:</label>
+                <input type="text" id="name" name="name" placeholder="name" required>
+
+                <label for="email">your email:</label>
+                <input type="email" id="email" name="email" placeholder="email..." required>
+
+                <label for="message">your message:</label>
+                <textarea id="message" name="message" placeholder="write your message..." required></textarea>
+
+                <button type="submit">Send!</button>
+
+            </form>
+
+            
+        </div>
+
+        <div class="right-cm">
+            <div class="socials">
+            <a href="https://www.instagram.com/elian.sms/" class="insta-link">
+                <button type="button" class="insta">
+                    <img src="assets/instagram.png" alt="instagram link" class="insta">
+                </button>
+            </a>
+
+            <a href="https://www.youtube.com/@elian.sms1" class="youtube-link">
+                <button type="button" class="youtube">
+                    <img src="assets/youtube.png" alt="youtube link" class="youtube">
+                </button>
+            </a>
+            
+
+            <a href="https://www.artstation.com/elian_vifer" class="artstation-link">
+                <button type="button" class="artstation">
+                    <img src="assets/artstation.png" alt="instagram link" class="artstation">
+                </button>
+            </a>
+            </div>
+        </div>
+    </div>
+
+<div class="moving-cm">
+    <a href="my-art-g.html">
+        <button type="button">Back</button>
+    </a>
+</div>
+
+<audio id="click-sound" src="assets/transitionsound.mp3" preload="auto"></audio>
+<script>
+document.addEventListener("click", function(event) {
+
+    const link = event.target.closest("a");
+    const button = event.target.closest("button");
+
+    // Ignore clicks that aren't on links or buttons
+    if (!link && !button) return;
+
+    const sound = document.getElementById("click-sound");
+
+    // Restart the sound
+    sound.currentTime = 0;
+
+    // If it's a link, wait for the sound before navigating
+    if (link) {
+        event.preventDefault();
+
+        const destination = link.href;
+
+        sound.onended = function() {
+            window.location.href = destination;
+        };
+
+        sound.play().catch(function() {
+            window.location.href = destination;
+        });
+
+    } else {
+        // Regular buttons just play the sound
+        sound.play();
+    }
+
+});
+</script>
+
+<p class="copyright2">
+    This work is of the sole ownership of Elian.SMS
+    and may not be put through any form of
+    generative AI.
+</p>
+
+</body>
+</html>

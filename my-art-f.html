@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>elian.sms animations</title>
+
+       <link type="text/css" rel="stylesheet" href="style.css">
+
+            <!-- This code below is my Favicon -->
+      <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+      <link rel="shortcut icon" href="assets/favicon.ico" />
+
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+      <link rel="manifest" href="assets/site.webmanifest" />
+   </head>
+
+<body>
+    <div class="container-base">
+        <div class="left-aart">
+          
+         <!-- This code below is TOP UI -->
+            <a href="index.html">
+                <button type="button" class="uih-art">
+                    <img src="assets/UI/home-blank.png" alt="home">
+                </button>
+            </a>
+            <a href="about-me.html">
+                <button type="button" class="uia-art">
+                    <img src="assets/UI/about-blank.png" alt="about-me">
+                </button>
+            </a>
+            <a href="concept-art-a.html">
+                <button type="button" class="uib-art">
+                    <img src="assets/UI/art-selected.png" alt="my-art">
+                </button>
+            </a>
+            <a href="contact-me.html">
+                <button type="button" class="uic-art">
+                    <img src="assets/UI/contact-blank.png" alt="contact-me">
+                </button>
+            </a>
+            <h1 class="anim">Animation</h1>
+                <iframe
+                    class="earrings-video"
+                    src="https://www.youtube.com/embed/GCa-YQ_CPVc"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+    </div>
+        <div class="right-aart">
+            <iframe
+                class="tj-video"
+                src="https://www.youtube.com/embed/U99UWxAFNIc"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            
+            <iframe
+                class="dall-video"                
+                src="https://www.youtube.com/embed/Ni4Z4X4uT94"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        <!--HIDDEN-->
+            <iframe
+                class="xanhola-video"
+                src="https://www.youtube.com/embed/7UH4q_FkPfg"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            
+            <iframe
+                class="xmary-video"                
+               src="https://www.youtube.com/embed/7UH4q_FkPfg"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+            <iframe
+                class="xheadphones-video"
+                src="https://www.youtube.com/embed/GY2wF9vs-wU"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            
+            <iframe
+                class="xtrend-video"                
+                src="https://www.youtube.com/embed/Rr3MIZ8iEEU"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+    </div>
+
+</div>
+
+<!-- Bottom-left burger menu -->
+<div class="index-art">
+
+<button type="button" class="menu-toggle" id="menu-toggle">
+    <span class="burger-icon">☰</span>
+    <span class="arrow-icon">↑</span>
+</button>
+
+    <div class="menu-items" id="menu-items">
+
+        <a href="my-art-a.html">
+            <button type="button">Concept Art</button>
+        </a>
+
+        <a href="my-art-d.html">
+            <button type="button">Illustration</button>
+        </a>
+
+        <a href="my-art-f.html">
+            <button type="button">Animation</button>
+        </a>
+
+    </div>
+</div>
+
+<!-- Bottom-right navigation -->
+<div class="moving-art">
+
+    <a href="my-art-e.html">
+        <button type="button">Back</button>
+    </a>
+
+    <a href="my-art-g.html">
+        <button class="next" type="button">Next</button>
+    </a>
+
+</div>
+
+<audio id="click-sound" src="assets/transitionsound.mp3" preload="auto"></audio>
+<script>
+document.addEventListener("click", function(event) {
+
+    const link = event.target.closest("a");
+    const button = event.target.closest("button");
+
+    // Ignore clicks that aren't on links or buttons
+    if (!link && !button) return;
+
+    const sound = document.getElementById("click-sound");
+
+    // Restart the sound
+    sound.currentTime = 0;
+
+    // If it's a link, wait for the sound before navigating
+    if (link) {
+        event.preventDefault();
+
+        const destination = link.href;
+
+        sound.onended = function() {
+            window.location.href = destination;
+        };
+
+        sound.play().catch(function() {
+            window.location.href = destination;
+        });
+
+    } else {
+        // Regular buttons just play the sound
+        sound.play();
+    }
+
+});
+</script>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const menuItems = document.getElementById("menu-items");
+
+menuToggle.addEventListener("click", function() {
+    menuItems.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+});
+</script>
+
+<script>
+    document.querySelector(".next").addEventListener("click", function() {
+    if (window.innerWidth <= 768) {
+        window.location.href = "contact-me.html";
+    } else {
+        window.location.href = "my-art-g.html";
+    }
+});
+</script>
+
+<p class="copyright8">
+    This work is of the sole ownership of Elian.SMS
+    and may not be put through any form of
+    generative AI.
+</p>
+
+</body>
+</html>

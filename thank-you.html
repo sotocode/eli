@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>i thank u</title>
+
+       <link type="text/css" rel="stylesheet" href="style.css">
+
+            <!-- This code below is my Favicon -->
+      <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+      <link rel="shortcut icon" href="assets/favicon.ico" />
+
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+      <link rel="manifest" href="assets/site.webmanifest" />
+</head>
+
+<body>
+
+
+    <img class="thanku" src="assets/thank-desk.png" alt="thanks">
+
+<audio id="background-music" src="assets/thank.mp3" autoplay></audio>
+
+<script>
+    const music = document.getElementById("background-music");
+
+    music.volume = 1;
+
+    music.play().catch(function(error) {
+        console.log("Browser blocked autoplay:", error);
+    });
+
+    setTimeout(function() {
+        window.location.href = "contact-me.html";
+    }, 1500);
+</script>
+
+</body>
+</html>

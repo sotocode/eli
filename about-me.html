@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>elian.sms about me</title>
+
+       <link type="text/css" rel="stylesheet" href="style.css">
+
+            <!-- This code below is my Favicon -->
+      <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+      <link rel="shortcut icon" href="assets/favicon.ico" />
+
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+      <link rel="manifest" href="assets/site.webmanifest" />
+
+      <!--this is my paragraph font-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
+   </head>
+
+<body>
+    <div class="container-am">
+        <div class="left-am">
+          
+         <!-- This code below is TOP UI -->
+            <a href="index.html">
+                <button type="button" class="uih-am">
+                    <img src="assets/UI/home-blank.png" alt="home">
+                </button>
+            </a>
+            <a href="about-me.html">
+                <button type="button" class="uia-am">
+                    <img src="assets/UI/about-selected.png" alt="about-me">
+                </button>
+            </a>
+            <a href="my-art-a.html">
+                <button type="button" class="uib-am">
+                    <img src="assets/UI/art-blank.png" alt="my-art">
+                </button>
+            </a>
+            <a href="contact-me.html">
+                <button type="button" class="uic-am">
+                    <img src="assets/UI/contact-blank.png" alt="contact-me">
+                </button>
+            </a>
+        <div class="desktop-statement">
+            <p class="statement-text">Hello! <br>
+            I'm Eli, or Elian.sms <br><br> Currently I'm a Miami-based artist with a <br>focus on concept art. I have experience in multiple programs, <br> including Procreate, Blender, Photoshop, After Effects, and <br> Clip Studio Paint. I especially love making enviromental concept art <br> and  developing spaces for different stories.</p>
+        </div>
+             <p class="mobile-statement">
+                Hello! <br>
+                I'm Eli, or Elian.sms <br><br>
+                Currently I'm a Miami-based artist 
+                with a focus on <br> concept art. 
+                I have experience in multiple<br> programs, 
+                including Procreate, Blender, Photoshop, <br> 
+                After Effects, and Clip Studio Paint.<br> 
+                I especially love  making environmental 
+                concept art<br> and developing spaces
+                for different stories.
+            </p>
+        </div>
+
+        <div class="right-am">
+
+        </div>
+    </div>
+
+<div class="moving-am">
+    <a href="index.html">
+        <button type="button">Back</button>
+    </a>
+    <a href="my-art-a.html">
+        <button type="button">Next</button>
+    </a>
+</div>
+
+<audio id="click-sound" src="assets/transitionsound.mp3" preload="auto"></audio>
+<script>
+document.addEventListener("click", function(event) {
+
+    const link = event.target.closest("a");
+    const button = event.target.closest("button");
+
+    // Ignore clicks that aren't on links or buttons
+    if (!link && !button) return;
+
+    const sound = document.getElementById("click-sound");
+
+    // Restart the sound
+    sound.currentTime = 0;
+
+    // If it's a link, wait for the sound before navigating
+    if (link) {
+        event.preventDefault();
+
+        const destination = link.href;
+
+        sound.onended = function() {
+            window.location.href = destination;
+        };
+
+        sound.play().catch(function() {
+            window.location.href = destination;
+        });
+
+    } else {
+        // Regular buttons just play the sound
+        sound.play();
+    }
+
+});
+</script>
+
+<p class="copyright">
+    This work is of the sole ownership of Elian.SMS
+    and may not be put through any form of
+    generative AI.
+</p>
+
+</body>
+</html>

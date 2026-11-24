@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>elian.sms concept art</title>
+
+       <link type="text/css" rel="stylesheet" href="style.css">
+
+            <!-- This code below is my Favicon -->
+      <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+      <link rel="shortcut icon" href="assets/favicon.ico" />
+
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+      <link rel="manifest" href="assets/site.webmanifest" />
+   </head>
+
+<body>
+    <div class="container-base">
+        <div class="left-cart">
+          
+         <!-- This code below is TOP UI -->
+            <a href="index.html">
+                <button type="button" class="uih-art">
+                    <img src="assets/UI/home-blank.png" alt="home">
+                </button>
+            </a>
+            <a href="about-me.html">
+                <button type="button" class="uia-art">
+                    <img src="assets/UI/about-blank.png" alt="about-me">
+                </button>
+            </a>
+            <a href="concept-art-a.html">
+                <button type="button" class="uib-art">
+                    <img src="assets/UI/art-selected.png" alt="my-art">
+                </button>
+            </a>
+            <a href="contact-me.html">
+                <button type="button" class="uic-art">
+                    <img src="assets/UI/contact-blank.png" alt="contact-me">
+                </button>
+            </a>
+            <h1>Concept <br> Art</h1>
+        <img src="assets/art/ca-1.png"
+        class="sal artwork-thumbnail"
+        alt="Sally Face Fan Concept Art"
+            data-page="my-art-a.html"
+        data-title="Sally Face Character"
+        data-description="Sally Face fan-concept art in my style. 
+        
+        28.5 x 17.4 inches.
+        
+        Sep. 20th, 2026.">
+
+    </div>
+
+        <div class="right-cart">
+
+        <img src="assets/art/ca-2.png"
+            class="dall1 artwork-thumbnail"
+            alt="Dallas Carmona Concept Art"
+            data-page="my-art-a.html"
+            data-title="Dallas Carmona"
+            data-description="Dallas Carmona Original Character Outfit Sheet. 
+            
+            6 x 3 inches.
+            
+            Mar. 10th, 2026.">
+
+        <img src="assets/art/ca-3.png"
+            class="tj1 artwork-thumbnail"
+            alt="Tristan Jay (TJ) Manolo Concept Art"
+            data-page="my-art-a.html"
+            data-title="Tristan Jay (TJ) Manolo"
+            data-description="Tristan Jay (TJ) Manolo Original Character Outfit Sheet. 
+            
+            6 x 3 inches.
+            
+            Mar. 28th, 2026.">
+            
+        <!--HIDDEN-->
+        <img src="assets/art/ca-4.png"
+        class="xtj2 artwork-thumbnail"
+        alt="TJ Manolo Room Concept Art"
+            data-page="my-art-b.html"        
+        data-title="TJ's Room"
+        data-description="Tristan Jay (TJ) Manolo Enviroment Concept Art. 
+        
+           10.2 x 9.5 inches.
+        
+           Aug. 25th, 2026.">
+        
+         <img src="assets/art/ca-5.png"
+            class="xdall2 artwork-thumbnail"
+            alt="Dallas Carmona Concept Art"
+            data-page="my-art-b.html"
+            data-title="Dallas Carmona"
+            data-description="Dallas Carmona Original Character Outfit Sheet. 
+            
+            13.6 x 13.6 inches.
+            
+            Aug. 23rd, 2026.">
+
+        <img src="assets/art/ca-61.png"
+            class="xlj artwork-thumbnail"
+            alt="Larry Johnson Manolo Concept Art"
+                data-page="my-art-b.html"
+            data-title="Larry Johnson Character Sheet"
+            data-description="Sally Face fan-concept art in my style. 
+        
+           10.4 x 38.1 inches.
+        
+          Sep. 27th, 2026.">
+
+        <img src="assets/art/ca-7.png"
+         class="xmjfg artwork-thumbnail"
+         alt="Mary Johnson and Fern Goodenuf AU Concept Art"
+         data-page="my-art-c.html"     
+         data-title="Mary Johnson and Fern Goodenuf"
+         data-description="Alternate Universe concept of Mary Johnson and Fern Goodenuf. 
+        
+           7.9 x 11 inches.
+        
+           Jun. 8th, 2026.">
+
+        <img src="assets/art/ca-8.png"
+            class="xtjdall artwork-thumbnail"
+            alt="TJ Manolo and Dallas Carmona Poster Concept Art"
+            data-page="my-art-c.html"
+            data-title="Tristan Jay Manolo and Dallas Carmona poster concept"
+            data-description="TJ Manolo and Dallas Carmona Poster Concept. 
+            
+            8 x 10 inches.
+            
+            Oct. 21st, 2025.">
+        
+    </div>
+</div>
+        <!-- Artwork overlay -->
+<div class="art-overlay" id="art-overlay">
+
+    <button class="art-close" id="art-close">&times;</button>
+
+<div class="art-view">
+
+    <button class="art-prev" id="art-prev">&#10094;</button>
+
+    <img id="expanded-artwork" src="" alt="">
+
+    <div class="art-view-description">
+        <h2 id="art-title"></h2>
+        <p id="art-description"></p>
+    </div>
+
+    <button class="art-next" id="art-next">&#10095;</button>
+
+</div>
+
+
+</div>
+
+<!-- Bottom-left burger menu -->
+<div class="index-art">
+
+<button type="button" class="menu-toggle" id="menu-toggle">
+    <span class="burger-icon">☰</span>
+    <span class="arrow-icon">↑</span>
+</button>
+
+    <div class="menu-items" id="menu-items">
+
+        <a href="my-art-a.html">
+            <button type="button">Concept Art</button>
+        </a>
+
+        <a href="my-art-d.html">
+            <button type="button">Illustration</button>
+        </a>
+
+        <a href="my-art-f.html">
+            <button type="button">Animation</button>
+        </a>
+
+    </div>
+</div>
+
+<!-- Bottom-right navigation -->
+<div class="moving-art">
+
+    <a href="about-me.html">
+        <button type="button">Back</button>
+    </a>
+
+    <a href="my-art-b.html">
+        <button class="next" type="button">Next</button>
+    </a>
+
+</div>
+
+<audio id="click-sound" src="assets/transitionsound.mp3" preload="auto"></audio>
+<script>
+document.addEventListener("click", function(event) {
+
+    const link = event.target.closest("a");
+    const button = event.target.closest("button");
+
+    // Ignore clicks that aren't on links or buttons
+    if (!link && !button) return;
+
+    const sound = document.getElementById("click-sound");
+
+    // Restart the sound
+    sound.currentTime = 0;
+
+    // If it's a link, wait for the sound before navigating
+    if (link) {
+        event.preventDefault();
+
+        const destination = link.href;
+
+        sound.onended = function() {
+            window.location.href = destination;
+        };
+
+        sound.play().catch(function() {
+            window.location.href = destination;
+        });
+
+    } else {
+        // Regular buttons just play the sound
+        sound.play();
+    }
+
+});
+</script>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const menuItems = document.getElementById("menu-items");
+
+menuToggle.addEventListener("click", function() {
+    menuItems.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+});
+</script>
+
+<script>
+function getVisibleArtworks() {
+    return Array.from(
+        document.querySelectorAll(".artwork-thumbnail")
+    ).filter(artwork => {
+        return getComputedStyle(artwork).display !== "none";
+    });
+}
+
+let artworks = getVisibleArtworks();
+
+const overlay = document.getElementById("art-overlay");
+const expandedImage = document.getElementById("expanded-artwork");
+const artTitle = document.getElementById("art-title");
+const artDescription = document.getElementById("art-description");
+
+let currentIndex = 0;
+
+function showArtwork(index) {
+    currentIndex = index;
+
+    const artwork = artworks[currentIndex];
+
+    expandedImage.src = artwork.src;
+    expandedImage.alt = artwork.alt;
+    artTitle.textContent = artwork.dataset.title;
+    artDescription.textContent = artwork.dataset.description;
+}
+
+function openArtwork(index) {
+    showArtwork(index);
+    overlay.classList.add("active");
+}
+
+function changeArtwork(direction) {
+    const nextIndex = currentIndex + direction;
+
+    // Move through the artworks on the current page
+    if (nextIndex >= 0 && nextIndex < artworks.length) {
+        showArtwork(nextIndex);
+        return;
+    }
+
+    // Get the actual page currently being viewed
+    const currentPage = window.location.pathname.split("/").pop();
+
+    let destination;
+
+    // MOBILE: go from concept art page A to illustration page D
+    if (window.innerWidth <= 768 &&
+        currentPage === "my-art-a.html" &&
+        direction === 1) {
+
+        destination = "my-art-d.html";
+
+    } else {
+        // DESKTOP: continue through the normal gallery order
+        destination = direction === 1
+            ? getNextPage(currentPage)
+            : getPreviousPage(currentPage);
+    }
+
+    if (destination) {
+        sessionStorage.setItem(
+            "openFirstArtwork",
+            direction === 1 ? "first" : "last"
+        );
+
+        window.location.href = destination;
+    }
+}
+
+// Set the order of your pages here
+const galleryPages = [
+    "my-art-a.html",
+    "my-art-b.html",
+    "my-art-c.html",
+    "my-art-d.html",
+    "my-art-e.html",
+];
+
+function getNextPage(currentPage) {
+    const index = galleryPages.indexOf(currentPage);
+    return galleryPages[index + 1] || null;
+}
+
+function getPreviousPage(currentPage) {
+    const index = galleryPages.indexOf(currentPage);
+    return galleryPages[index - 1] || null;
+}
+
+artworks.forEach(function(artwork, index) {
+    artwork.addEventListener("click", function() {
+        openArtwork(index);
+    });
+});
+
+document.getElementById("art-prev").addEventListener("click", function() {
+    changeArtwork(-1);
+});
+
+document.getElementById("art-next").addEventListener("click", function() {
+    changeArtwork(1);
+});
+
+document.getElementById("art-close").addEventListener("click", function() {
+    overlay.classList.remove("active");
+});
+
+overlay.addEventListener("click", function(event) {
+    if (event.target === overlay) {
+        overlay.classList.remove("active");
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    if (!overlay.classList.contains("active")) return;
+
+    if (event.key === "Escape") {
+        overlay.classList.remove("active");
+    }
+
+    if (event.key === "ArrowLeft") {
+        changeArtwork(-1);
+    }
+
+    if (event.key === "ArrowRight") {
+        changeArtwork(1);
+    }
+});
+
+// Automatically open the first or last artwork after changing pages
+const openPosition = sessionStorage.getItem("openFirstArtwork");
+
+if (openPosition && artworks.length > 0) {
+    sessionStorage.removeItem("openFirstArtwork");
+
+    if (openPosition === "first") {
+        openArtwork(0);
+    } else {
+        openArtwork(artworks.length - 1);
+    }
+}
+</script>
+
+<script>
+    document.querySelector(".next").addEventListener("click", function() {
+    if (window.innerWidth <= 768) {
+        window.location.href = "my-art-d.html";
+    } else {
+        window.location.href = "my-art-b.html";
+    }
+});
+</script>
+
+<p class="copyright3">
+    This work is of the sole ownership of Elian.SMS
+    and may not be put through any form of
+    generative AI.
+</p>
+
+</body>
+</html>
